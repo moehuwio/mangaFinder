@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="1200.0" prefHeight="800" prefWidth="1200" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+    <children>
+      <AnchorPane prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="802.0" fitWidth="1190.0">
+               <image>
+                  <Image url="@../../../../Downloads/collage1.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+        <GridPane layoutX="6.0" layoutY="-22.0" prefHeight="833.0" prefWidth="1200.0" AnchorPane.bottomAnchor="-11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-22.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.72222900390625" minWidth="10.0" prefWidth="344.73291015625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="461.28631591796875" minWidth="10.0" prefWidth="461.28631591796875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="447.0" minWidth="10.0" prefWidth="407.21368408203125" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <AnchorPane fx:id="bar" prefHeight="869.0" prefWidth="457.0" style="-fx-background-color: #018786;" GridPane.columnIndex="1">
+                    <children>
+                        <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find The Manga You Want." wrappingWidth="411.8672180175781">
+                            <font>
+                                <Font name="Lucida Grande" size="31.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="chapterBox" alignment="CENTER" layoutX="153.0" layoutY="299.0" prefHeight="47.0" prefWidth="150.0" promptText="Chapter?" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Lucida Grande" size="24.0" />
+                     </font>
+                  </TextField>
+                        <Button fx:id="search" layoutX="181.0" layoutY="455.0" mnemonicParsing="false" onAction="#pressB" prefHeight="45.0" prefWidth="97.0" text="Search" textFill="#d500ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <ComboBox fx:id="combobx" layoutX="101.0" layoutY="378.0" onAction="#Csender" prefHeight="50.0" prefWidth="262.0" promptText="Choose Manga" />
+                  <Button layoutX="2.0" layoutY="539.0" mnemonicParsing="false" onAction="#switcher4" prefHeight="57.0" prefWidth="457.0" style=": ;" text="Library" textFill="WHITE" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0">
+                     <font>
+                        <Font name="Lucida Grande" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="-6.0" layoutY="634.0" mnemonicParsing="false" onAction="#switcher" prefHeight="57.0" prefWidth="457.0" text="Reader" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="sourceList" alignment="CENTER" layoutX="87.0" layoutY="203.0" prefHeight="61.0" prefWidth="276.0" promptText="Source?" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Lucida Grande" size="32.0" />
+                     </font>
+                  </TextField>
+                    </children>
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" choke="0.19" height="57.21" radius="28.86" width="60.23" />
+               </effect>
+                </AnchorPane>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800" minWidth="1200" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #E9FFEB;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.readerController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #E9FFEB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxWidth="200.0" minHeight="0.0" minWidth="200.0" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #E9FFEB;" SplitPane.resizableWithParent="false">
+               <children>
+                  <ScrollPane fx:id="imageSlider" prefHeight="803.0" prefWidth="200.0" style="-fx-background-color: #E9FFEB;" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="200.0" style="-fx-background-color: #8AA19C #8AA19C;">
+                           <effect>
+                              <GaussianBlur />
+                           </effect></AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #E9FF#E9FFEB;" SplitPane.resizableWithParent="false">
+               <children>
+                  <StackPane fx:id="imageStack" layoutX="-5.0" layoutY="-4.0" prefHeight="798.0" prefWidth="990.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <effect>
+                        <DropShadow />
+                     </effect></StackPane>
+                  <Button layoutY="11.0" mnemonicParsing="false" onAction="#switcher2" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: black;" text="Go Home" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+        </items>
+         <effect>
+            <DropShadow />
+         </effect>
+      </SplitPane>
+      <Button mnemonicParsing="false" onAction="#callNewChapt" prefHeight="36.0" prefWidth="187.0" text="next chapt" />
+   </children>
+</AnchorPane>
